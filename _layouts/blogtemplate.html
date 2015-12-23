@@ -3,7 +3,13 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
 <head>
-    <title>Responsive website template for products</title>
+    <title>
+        {% if page.title %}
+            {{ page.title }}
+        {% else %}
+            Default Page Title
+        {% endif %}
+    </title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,46 +33,21 @@
     <![endif]-->
 </head> 
 
-<body class="resetpass-page access-page has-full-screen-bg">
-    <div class="upper-wrapper">
-        <!-- ******HEADER****** -->
-        <header class="header">  
+<body class="blog-page">
+    <div class="wrapper">
+        <!-- ******HEADER****** --> 
+        <header class="header header-blog">  
             <div class="container">       
                 <h1 class="logo">
-                    <a href="index.html"><span class="logo-icon"></span><span class="text">Velocity</span></a>
+                    <a href="blog.html">Velocity <span class="sub">Blog</span></a>
                 </h1><!--//logo-->
-                                     
+                {% include blognav.html %}        
             </div><!--//container-->
-        </header><!--//header-->
-        
-        <!-- ******resetpass Section****** --> 
-        <section class="resetpass-section access-section section">
-            <div class="container">
-                <div class="row">
-                    <div class="form-box col-md-6 col-sm-8 col-xs-12 col-md-offset-3 col-sm-offset-2 xs-offset-0">     
-                        <div class="form-box-inner">
-                            <h2 class="title text-center">Password Reset</h2>    
-                            <p class="intro">Please enter your email address below and we'll email you a link to a page where you can easily create a new password.</p>             
-                            <div class="row">
-                                <div class="form-container">
-                                    <form class="resetpass-form">              
-                                        <div class="form-group email">
-                                            <label class="sr-only" for="reset-email">Email</label>
-                                            <input id="reset-email" type="email" class="form-control resetpass-email" placeholder="Email">
-                                        </div><!--//form-group-->  
-                                        <button type="submit" class="btn btn-block btn-cta-primary">Reset Password</button>
-                                    </form>
-                                    <p class="lead text-center">Take me back to the <a href="login.html">login</a> page</p>
-                                </div><!--//form-container-->
-                            </div><!--//row-->
-                        </div><!--//form-box-inner-->
-                    </div><!--//form-box-->
-                </div><!--//row-->
-            </div><!--//container-->
-        </section><!--//contact-section-->
-    </div><!--//upper-wrapper-->
-    
-    <!-- ******FOOTER****** --> 
+        </header><!--//header-->         
+
+{{ content }}
+
+<!-- ******FOOTER****** --> 
     <footer class="footer">
         <div class="footer-content">
             <div class="container">
@@ -166,6 +147,23 @@
         </div><!--//bottom-bar-->
     </footer><!--//footer-->
     
+    <!-- Video Modal -->
+    <div class="modal modal-video" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 id="videoModalLabel" class="modal-title sr-only">Video Tour</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="video-container">
+                        <iframe src="//player.vimeo.com/video/28872840?color=ffffff&amp;wmode=transparent" width="720" height="405" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div><!--//video-container-->
+                </div><!--//modal-body-->
+            </div><!--//modal-content-->
+        </div><!--//modal-dialog-->
+    </div><!--//modal-->
+    
     <!-- *****CONFIGURE STYLE****** -->  
     <div class="config-wrapper">
         <div class="config-wrapper-inner">
@@ -198,6 +196,13 @@
     <script type="text/javascript" src="assets/plugins/jquery-placeholder/jquery.placeholder.js"></script>
     <script type="text/javascript" src="assets/plugins/FitVids/jquery.fitvids.js"></script>
     <script type="text/javascript" src="assets/plugins/flexslider/jquery.flexslider-min.js"></script> 
+            
+    <!-- blog page specific js starts --> 
+    <script type="text/javascript" src="assets/plugins/imagesloaded/imagesloaded.pkgd.min.js"></script>     
+    <script type="text/javascript" src="assets/plugins/masonry.pkgd.min.js"></script> 
+    <script type="text/javascript" src="assets/js/blog.js"></script>
+    <!-- blog page specific js ends -->   
+     
     <script type="text/javascript" src="assets/js/main.js"></script>
     
             
