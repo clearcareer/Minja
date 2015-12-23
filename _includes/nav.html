@@ -9,11 +9,40 @@
                 </div><!--//navbar-header-->
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active nav-item"><a href="index.html">Home</a></li>
-                        <li class="nav-item"><a href="about.html">About Me</a></li>
-                        <li class="nav-item"><a href="features.html">Portfolio</a></li>
-                        <li class="nav-item"><a href="blog.html">Blog</a></li>
-                        <li class="nav-item"><a href="contact.html">Contact</a></li>
+                        {% if page.url == '/home.html' %}
+                            <li class="active nav-item">
+                        {% else %}
+                            <li class="nav-item">
+                        {% endif %}
+                            <a href="index.html">Home</a>
+                        </li>
+                        {% if page.url == '/about.html' %}
+                            <li class="active nav-item">
+                        {% else %}
+                            <li class="nav-item">
+                        {% endif %}
+                        <a href="about.html">About Me</a>
+                        </li>
+                        {% if page.url == '/portfolio.html' %}
+                            <li class="active nav-item">
+                        {% else %}
+                            <li class="nav-item">
+                        {% endif %}
+                        <a href="portfolio.html">Portfolio</a>
+                        </li>
+                        {% if page.url == '/blog.html' %}
+                            <li class="active nav-item">
+                        {% else %}
+                            <li class="nav-item">
+                        {% endif %}
+                        <a href="blog.html">Blog</a>
+                        </li>
+                        {% if page.url == '/contact.html' %}
+                            <li class="active nav-item">
+                        {% else %}
+                            <li class="nav-item">
+                        {% endif %}<a href="contact.html">Contact</a>
+                        </li>
                         
                 </div><!--//navabr-collapse-->
             </nav><!--//main-nav-->                     
