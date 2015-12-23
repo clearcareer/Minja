@@ -3,13 +3,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
 <head>
-    <title>
-        {% if page.title %}
-            {{ page.title }}
-        {% else %}
-            Default Page Title
-        {% endif %}
-    </title>
+    <title>Responsive website template for products</title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,17 +27,15 @@
     <![endif]-->
 </head> 
 
+{{ content }}
+
 <body class="home-page">   
     <!-- ******HEADER****** --> 
     <header id="header" class="header navbar-fixed-top">  
         <div class="container">       
             <h1 class="logo">
-                <a href="index.html"><span class="text">Yi Min Chun</span></a>
+                <a href="index.html"><span class="text">Velocity</span></a>
             </h1><!--//logo-->
-                           
-        </div><!--//container-->
-    </header><!--//header-->
-
             <nav class="main-nav navbar-right" role="navigation">
                 <div class="navbar-header">
                     <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
@@ -74,9 +66,9 @@
                         <li class="nav-item nav-item-cta last"><a class="btn btn-cta btn-cta-secondary" href="signup.html">Sign Up Free</a></li>
                     </ul><!--//nav-->
                 </div><!--//navabr-collapse-->
-            </nav><!--//main-nav-->      
-    
-    {{ content }}
+            </nav><!--//main-nav-->                     
+        </div><!--//container-->
+    </header><!--//header-->
 
         <!-- ******FOOTER****** --> 
     <footer class="footer">
@@ -236,4 +228,3 @@
             
 </body>
 </html> 
-
