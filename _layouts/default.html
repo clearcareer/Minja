@@ -35,7 +35,6 @@
     <![endif]-->
 </head> 
 
-{{ content }}
 
 <body class="home-page">   
     <!-- ******HEADER****** --> 
@@ -44,11 +43,13 @@
             <h1 class="logo">
                 <a href="index.html"><span class="text">Minja</span></a>
             </h1><!--//logo-->
-
+            
             {% include nav.html %}
             
         </div><!--//container-->
     </header><!--//header-->
+
+    {{ content }}
 
         <!-- ******FOOTER****** --> 
     <footer class="footer">
