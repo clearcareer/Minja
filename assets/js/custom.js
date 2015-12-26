@@ -1,3 +1,6 @@
+// SMOOTH SCROLL 
+// ======================================
+
 $(document).ready(function() {
 	$(function() {
 	  $('a[href*=#]:not([href=#])').click(function() {
@@ -13,4 +16,12 @@ $(document).ready(function() {
 	    }
 	  });
 	});
+});
+
+
+// MIXITUP PORFOLIO FILTER
+// ======================================
+
+$(function(){
+  $('#Container').mixItUp();
 });
